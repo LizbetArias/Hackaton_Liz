@@ -53,3 +53,10 @@ spec:
         - containerPort: 4200  # Puerto en el contenedor donde escucha la aplicación
 
 #kubectl apply -f lizbet-arias-deployment.yml
+# kubectl port-forward service/lizbet-arias-service 8080:80
+# kubectl port-forward pod/mi-pod 8080:8080
+# COMPROBAMOS EL FUNCIONAMIENTO 
+#kubectl port-forward service/backend-lizbet-arias-service 8080:30001 -n lizbet-arias-namespace
+#kubectl port-forward service/frontend-lizbet-arias-service 4200:4200 -n lizbet-arias-namespace
+
+# kubectl get pods -n lizbet-arias-namespace

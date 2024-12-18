@@ -23,3 +23,5 @@ spec:
         target:
           type: Utilization
           averageUtilization: 50
+
+# kubectl apply -f backend-lizbet-arias-hpa.yml
