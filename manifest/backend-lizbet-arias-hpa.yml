@@ -9,7 +9,7 @@ spec:
     kind: Deployment
     name: lizbet-arias-deployment
   minReplicas: 2
-  maxReplicas: 4
+  maxReplicas: 10
   metrics:
     - type: Resource
       resource:

@@ -59,4 +59,8 @@ spec:
 #kubectl port-forward service/backend-lizbet-arias-service 8080:30001 -n lizbet-arias-namespace
 #kubectl port-forward service/frontend-lizbet-arias-service 4200:4200 -n lizbet-arias-namespace
 
+# kubectl port-forward service/backend-lizbet-arias-service 8080:3001 -n lizbet-arias-namespace
+
 # kubectl get pods -n lizbet-arias-namespace
+# kubectl port-forward pods/lizbet-arias-backend-deployment-5856fd9d44-mnl7r 8080:8080 -n lizbet-arias-namespace
+# kubectl port-forward pods/lizbet-arias-frontend-deployment-56c57bc4b9-fvkx9 4200:4200 -n lizbet-arias-namespace
