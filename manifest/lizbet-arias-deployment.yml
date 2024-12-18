@@ -55,6 +55,7 @@ spec:
 #kubectl apply -f lizbet-arias-deployment.yml
 # kubectl port-forward service/lizbet-arias-service 8080:80
 # kubectl port-forward pod/mi-pod 8080:8080
+
 # COMPROBAMOS EL FUNCIONAMIENTO 
 #kubectl port-forward service/backend-lizbet-arias-service 8080:30001 -n lizbet-arias-namespace
 #kubectl port-forward service/frontend-lizbet-arias-service 4200:4200 -n lizbet-arias-namespace
@@ -62,5 +63,7 @@ spec:
 # kubectl port-forward service/backend-lizbet-arias-service 8080:3001 -n lizbet-arias-namespace
 
 # kubectl get pods -n lizbet-arias-namespace
-# kubectl port-forward pods/lizbet-arias-backend-deployment-5856fd9d44-mnl7r 8080:8080 -n lizbet-arias-namespace
-# kubectl port-forward pods/lizbet-arias-frontend-deployment-56c57bc4b9-fvkx9 4200:4200 -n lizbet-arias-namespace
+# kubectl port-forward pods/lizbet-arias-backend-deployment-5856fd9d44-525qw 8080:8080 -n lizbet-arias-namespace
+# kubectl port-forward pods/lizbet-arias-frontend-deployment-56c57bc4b9-6k2nt 4200:4200 -n lizbet-arias-namespace
+# http://localhost:4200/dashboard/reportes
+# http://localhost:8080/api/reports

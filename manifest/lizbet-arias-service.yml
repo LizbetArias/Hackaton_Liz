@@ -31,4 +31,4 @@ spec:
 
 
   # kubectl apply -f lizbet-arias-service.yml
-  # http://localhost:8080/api/reports
+ 
