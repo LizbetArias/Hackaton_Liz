@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lizbet-arias-backend-deployment
+  namespace: lizbet-arias-namespace
+spec:
+  replicas: 2  # Número de réplicas (puedes aumentar si es necesario)
+  selector:
+    matchLabels:
+      app: lizbet-arias-backend-deployment  # Cambiado para ser más específico
+  template:
+    metadata:
+      labels:
+        app: lizbet-arias-backend-deployment  # Cambiado para ser más específico
+    spec:
+      containers:
+      - name: backend-lizbet-arias
+        image: lizbet/prs1back:latest  # Imagen Docker del contenedor
+        ports:
+        - containerPort: 8080  # Puerto en el contenedor donde escucha la aplicación
+        envFrom:
+        - configMapRef:
+            name: lizbet-arias-configmap  # Asegúrate de que este ConfigMap exista
+        resources:
+          requests:
+            memory: "256Mi"  # Memoria mínima solicitada
+            cpu: "250m"      # CPU mínima solicitada
+          limits:
+            memory: "512Mi"  # Memoria máxima permitida
+            cpu: "500m"      # CPU máxima permitida
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lizbet-arias-frontend-deployment
+  namespace: lizbet-arias-namespace
+spec:
+  replicas: 2  # Número de réplicas (puedes aumentar si es necesario)
+  selector:
+    matchLabels:
+      app: lizbet-arias-frontend-deployment  # Cambiado para ser más específico
+  template:
+    metadata:
+      labels:
+        app: lizbet-arias-frontend-deployment  # Cambiado para ser más específico
+    spec:
+      containers:
+      - name: frontend-lizbet-arias
+        image: lizbet/prs1front:latest  # Imagen Docker del contenedor frontend
+        ports:
+        - containerPort: 4200  # Puerto en el contenedor donde escucha la aplicación
+
+#kubectl apply -f lizbet-arias-deployment.yml
